@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Link the compiled CSS file -->
+    <link rel="stylesheet" href="./assets/scss/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="dashboard-container">
+
+
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="./assets/images/logo.png" class="main-logo" alt="Logo">
+                    <span>HRHR</span>
+                    
+                </div>
+
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="active"><img src="./assets/images/dashbord-icon.png"> Dashboard</a></li>
+                    <li><a href="#"><img src="./assets/images/calander-icon.png"> Calendar</a></li>
+                    <li><a href="#"><img src="./assets/images/recrutment-Icon.png"> Recruitment</a></li>
+                    <li><a href="#"><img src="./assets/images/employee-Icon.png"> Employee</a></li>
+                    <li><a href="#"><img src="./assets/images/leave-Icon.png"> Leave</a></li>
+                    <li><a href="#"><img src="./assets/images/organization.png"> Organization</a></li>
+                    <li><a href="#"><img src="./assets/images/billing-Icon.png"> Billings</a></li>
+                    <li><a href="#"><img src="./assets/images/engagement.png"> Engagement</a></li>
+                    <li><a href="#"><img src="./assets/images/development.png"> Development</a></li>
+                    <li><a href="#"><img src="./assets/images/performance.png"> Performance</a></li>
+                    <li><a href="#"><img src="./assets/images/reports-icon.png"> Reports</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-bar">
+                <div class="top-left">
+                    <img src="./assets/images/toggle.png" class="toggle-btn" alt="Toggle Sidebar">
+                    <img src="./assets/images/Union.png" class="top-bar-union" alt="Logo">
+                    <span>Menumiz HR</span>
+                </div>
+                <div class="top-right">
+                    <div class="search">
+                        <i class="fa fa-search search-icon"></i>
+                        <input type="text" placeholder="Enter any keyword...">
+                    </div>
+                    <div class="notifications">
+                        <img src="./assets/images/top-bar-icon.png" class="icon">
+                    </div>
+                    <div class="notifications">
+                        <img src="./assets/images/notification.png" class="icon notification-icon" alt="Notifications" id="notification-icon">
+                        <span class="badge"></span>
+                    </div>
+                    <div class="profile">
+                        <img src="./assets/images/charli.png" alt="User Profile">
+                    </div>
+                </div>
+            </div>
+            <div id="notification-panel" class="hidden">
+                <div class="notification-header">
+                  <h2>Notifications</h2>
+                  <button id="mark-as-read">Mark all as read</button>
+                </div>
+                <ul>
+                  <li>
+                    <img src="./assets/images/charli.png" alt="Profile Image">
+                    <div class="content">
+                      <p><strong>Mark Jacobs</strong> has applied for leave and is currently awaiting approval.</p>
+                      <small>Today at 09:42 AM</small>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="./assets/images/charli.png" alt="Profile Image">
+                    <div class="content">
+                      <p><strong>Charlie Kristen</strong> has applied for leave and is currently awaiting approval.</p>
+                      <small>Today at 08:23 AM</small>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="./assets/images/charli.png" alt="Profile Image">
+                    <div class="content">
+                      <p><strong>Charlie Kristen</strong> has applied for leave and is currently awaiting approval.</p>
+                      <small>Today at 08:23 AM</small>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="./assets/images/charli.png" alt="Profile Image">
+                    <div class="content">
+                      <p><strong>Charlie Kristen</strong> has applied for leave and is currently awaiting approval.</p>
+                      <small>Today at 08:23 AM</small>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="./assets/images/charli.png" alt="Profile Image">
+                    <div class="content">
+                      <p><strong>Charlie Kristen</strong> has applied for leave and is currently awaiting approval.</p>
+                      <small>Today at 08:23 AM</small>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="./assets/images/charli.png" alt="Profile Image">
+                    <div class="content">
+                      <p><strong>Charlie Kristen</strong> has applied for leave and is currently awaiting approval.</p>
+                      <small>Today at 08:23 AM</small>
+                    </div>
+                  </li>
+                  <!-- Add more notifications here -->
+                </ul>
+              </div>
+
+            <div class="dashboard">
+                <div class="container">
+                    <!-- Tabs -->
+                    <div class="tabs">
+                        <button class="tablinks active" onclick="openTab(event, 'LeaveManagement')">Leave
+                            Management</button>
+                        <button class="tablinks" onclick="openTab(event, 'LeaveRequests')">Leave Requests</button>
+                        <button class="tablinks" onclick="openTab(event, 'LeaveTypes')">Leave Types</button>
+                        <button class="tablinks" onclick="openTab(event, 'LeaveCalendar')">Leave Calendar</button>
+                        <button class="tablinks" onclick="openTab(event, 'LeaveReport')">Leave Report</button>
+                        <button class="tablinks" onclick="openTab(event, 'LeaveApprover')">Leave Approver</button>
+                        <img src="./assets/images/top-bar-icon.png" class="icon">
+                    </div>
+                    <!-- Content -->
+                    <div id="LeaveManagement" class="tabcontent active">
+                        <h2>Dashboard</h2>
+                        <div class="heatmap-container">
+                            <!-- Left Heatmap -->
+                            <div class="heatmap">
+                                <div class="heatmap-header">
+                                    <span class="headmap-title">Heatmap</span>
+                                    <div class="headmap-detail">
+                                        <span>SICKDAY <i class="fa-solid fa-angle-down"
+                                                style="color: #515152;"></i></span>
+                                        <span>MARCH 2023 <i class="fa-solid fa-angle-down"
+                                                style="color: #515152;"></i></span>
+                                    </div>
+                                </div>
+                                <div class="heatmap-days">
+                                    <button>Mon</button>
+                                    <button>Tue</button>
+                                    <button>Wed</button>
+                                    <button>Thu</button>
+                                    <button class="active">Fri</button>
+                                    <button>Sat</button>
+                                    <button>Sun</button>
+                                </div>
+                                <div class="leave-types">
+                                    <div class="leave-type">
+                                        <p>Sick Leave</p>
+                                        <div class="circle">
+                                            <div class="outer-circle-sick">
+                                                <div class="inner-circle">
+                                                    <span>50%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="leave-type">
+                                        <p>Annual Leave</p>
+                                        <div class="circle">
+                                            <div class="outer-circle-annual">
+                                                <div class="inner-circle">
+                                                    <span>30%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="leave-type">
+                                        <p>Emergency Leave</p>
+                                        <div class="circle">
+                                            <div class="outer-circle-emergency">
+                                                <div class="inner-circle">
+                                                    <span>20%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="popular-day">Most popular day: Friday</p>
+                            </div>
+                            <!-- Right Most Days Away -->
+                            <div class="most-days-container">
+                                <div class="most-days-header">
+                                  <h3>Most Days Away</h3>
+                                  <span>MARCH 2023</span>
+                                </div>
+                            
+                                <ul class="user-list">
+                                  <li>
+                                    <div class="user-info">
+                                      <img src="./assets/images/Mark-jacob.png" alt="Mark Jacobs">
+                                      <span class="name">Mark Jacobs</span>
+                                    </div>
+                                    <span class="user-days">5.0 day(s)</span>
+                                  </li>
+                                  <li>
+                                    <div class="user-info">
+                                      <img src="./assets/images/charli.png" alt="Charlie Kristen">
+                                      <span class="name">Charlie Kristen</span>
+                                    </div>
+                                    <span class="user-days">3.5 day(s)</span>
+                                  </li>
+                                  <li>
+                                    <div class="user-info">
+                                      <img src="./assets/images/fariha.png" alt="Nur Fariha binti Maslan">
+                                      <span class="name">Nur Fariha binti Maslan</span>
+                                    </div>
+                                    <span class="user-days">1.0 day(s)</span>
+                                  </li>
+                                  <li>
+                                    <div class="user-info">
+                                      <img src="./assets/images/Mark-jacob.png" alt="Nishant Talwar">
+                                      <span class="name">Nishant Talwar</span>
+                                    </div>
+                                    <span class="user-days">1.0 day(s)</span>
+                                  </li>
+                                </ul>
+                            
+                                <div class="total">
+                                  TOTAL: 9.5 day(s)
+                                </div>
+                              </div>
+
+                              <!-- <div class="profile-container">
+                                <div class="profile-img">
+                                  <img src="./assets/images/fariha.png" alt="Profile Picture">
+                                </div>
+                                <div class="status-dot"></div>
+                              </div> -->
+                        </div>
+                    </div>
+                    <div id="LeaveRequests" class="tabcontent">
+                        <h2>Leave Requests</h2>
+                        <p>Leave requests content...</p>
+                    </div>
+                    <div id="LeaveTypes" class="tabcontent">
+                        <h2>Leave Types</h2>
+                        <p>Leave types content...</p>
+                    </div>
+                    <div id="LeaveCalendar" class="tabcontent">
+                        <h2>Leave Calendar</h2>
+                        <p>Leave calendar content...</p>
+                    </div>
+                    <div id="LeaveReport" class="tabcontent">
+                        <h2>Leave Report</h2>
+                        <p>Leave report content...</p>
+                    </div>
+                    <div id="LeaveApprover" class="tabcontent">
+                        <h2>Leave Approver</h2>
+                        <p>Leave approver content...</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="header">
+                        <h1>Leave Requests</h1>
+                        <div class="view-options">
+                            <button class="list-view active">List View</button>
+                            <button class="month-view">Month View</button>
+                        </div>
+                    </div>
+                    <div class="filter">
+                        <ul>
+                            <li class="active">All</li>
+                            <li>Approved</li>
+                            <li>Rejected</li>
+                        </ul>
+                        <div class="filter-date">
+                            <span>March 2023</span>
+                            <i class="arrow"></i>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                    <table >
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" /></th>
+                                <th>NAME</th>
+                                <th>PERIOD</th>
+                                <th>DAYS</th>
+                                <th>LEAVE TYPE</th>
+                                <th>ACTIONS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>
+                                    <div class="profile">
+                                        <img src="./assets/images/Mark-jacob.png" alt="user profile">
+                                        <span>Mark Jacobs</span>
+                                    </div>
+                                </td>
+                                <td>31 Mar, 2023 09:00 AM - 31 Mar, 2023 18:00 PM</td>
+                                <td>1.0</td>
+                                <td>Annual Leave</td>
+                                <td class="actions">
+                                    <button class="reject">REJECT</button>
+                                    <button class="approve">APPROVE</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="custom-checkbox"></td>
+                                <td>
+                                    <div class="profile">
+                                        <img src="./assets/images/charli.png" alt="user profile">
+                                        <span>Charlie Kristen</span>
+                                    </div>
+                                </td>
+                                <td>10 Apr, 2023 09:00 AM - 11 Apr, 2023 18:00 PM</td>
+                                <td>2.0</td>
+                                <td>Annual Leave</td>
+                                <td class="actions">
+                                    <button class="reject">REJECT</button>
+                                    <button class="approve">APPROVE</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="custom-checkbox"></td>
+                                <td>
+                                    <div class="profile">
+                                        <img src="./assets/images/fariha.png" alt="profile">
+                                        <span>Nur Fariha binti Maslan</span>
+                                    </div>
+                                </td>
+                                <td>21 Apr, 2023 09:00 AM - 24 Apr, 2023 18:00 PM</td>
+                                <td>2.0</td>
+                                <td>Hospital Leave</td>
+                                <td class="actions">
+                                    <button class="reject">REJECT</button>
+                                    <button class="approve">APPROVE</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>
+                                    <div class="profile">
+                                        <img src="./assets/images/charli.png" alt="profile">
+                                        <span>Nishant Talwar</span>
+                                    </div>
+                                </td>
+                                <td>27 Feb, 2023 14:00 PM - 28 Feb, 2023 18:00 PM</td>
+                                <td>1.5</td>
+                                <td>Sick Leave</td>
+                                <td class="actions">
+                                    <button class="reject hidden">REJECT</button>
+                                    <button class="approve">APPROVE</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>
+                                    <div class="profile">
+                                        <img src="./assets/images/Mark-jacob.png" alt="profile">
+                                        <span>Simon Minter</span>
+                                    </div>
+                                </td>
+                                <td>22 Feb, 2023 09:00 AM - 28 Feb, 2023 18:00 PM</td>
+                                <td>0.5</td>
+                                <td>Sick Leave</td>
+                                <td class="actions">
+                                    <button class="reject hidden">REJECT</button>
+                                    <button class="approve">APPROVE</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                    <div class="pagination">
+                        <button class="prev">PREVIOUS</button>
+                        <span>1-25 OF 227</span>
+                        <button class="next">NEXT</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="confirmationModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Confirmation</h2>
+                    <span class="close">&times;</span>
+                </div>
+
+                <p id="confirmationMessage">Are you sure want to approved Simon Minter sick leave for 1 day?</p>
+                <div class="modal-actions">
+                    <button class="btn-no">NO</button>
+                    <button class="btn-yes">YES</button>
+                </div>
+            </div>
+        </div>
+        <div id="rejectModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Confirmation</h2>
+                    <span class="close">&times;</span>
+                </div>
+
+                <p id="rejectionMessage">Are you sure want to reject Simon Minter sick leave for 1 day?</p>
+                <div class="modal-actions">
+                    <button class="btn-no">NO</button>
+                    <button class="btn-yes">YES</button>
+                </div>
+            </div>
+        </div>
+        <div id="snackbar" class="snackbar">
+            <div class="snackbar-progress"></div>
+            <div class="snackbar-content">
+                <span class="snackbar-title">Notification</span>
+                <div>
+                    <span class="snackbar-time">just now</span>
+                    <button class="snackbar-close" onclick="closeSnackbar()">×</button>
+                </div>
+            </div>
+            <div class="snackbar-body">
+                Simon Minter Sick Leave Approved!
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/snackbar.js"></script>
+</body>
+
+</html>
